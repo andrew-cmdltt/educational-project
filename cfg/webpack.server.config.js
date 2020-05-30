@@ -4,7 +4,6 @@ const nodeExternals = require('webpack-node-externals');
 const NODE_ENV = process.env.NODE_ENV;
 
 
-
 module.exports = {
     target: 'node',
     mode: NODE_ENV ? NODE_ENV : 'development',
@@ -18,10 +17,28 @@ module.exports = {
     },
     externals: [nodeExternals()],
     module: {
-        rules: [{
-            test: /\.[jt]sx?$/,
-            use: ['ts-loader']
-        }]
+        rules: [
+            {
+                test: /\.[jt]sx?$/,
+                use: ['ts-loader']
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                mode: 'local',
+                                localIdentName: '[name]__[local]--[hash:base64:5]',
+                            },
+                            onlyLocals: true
+                        }
+                    },
+                    'less-loader',
+                ]
+            }
+        ]
     },
     optimization: {
         minimize: false
