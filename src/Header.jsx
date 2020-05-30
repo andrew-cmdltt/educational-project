@@ -3,7 +3,7 @@ import * as React from 'react'
 export function Header() {
     return (
         <header>
-            <h1>Client settings!</h1>
+            <h1>Hello World!</h1>
         </header>
     );
 }
