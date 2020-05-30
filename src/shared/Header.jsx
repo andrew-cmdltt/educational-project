@@ -1,9 +1,10 @@
 import * as React from 'react'
-
-export function Header() {
+import {hot} from 'react-hot-loader/root';
+export function HeaderComponent() {
     return (
         <header>
-            <h1>3 434!</h1>
+            <h1>3 56!</h1>
         </header>
     );
 }
+export const Header = hot(HeaderComponent);
