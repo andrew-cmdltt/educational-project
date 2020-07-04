@@ -1,0 +1,21 @@
+
+.card {
+    background-color: var(--white);
+    border-radius: 7px;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    padding: 50px;
+
+}
+
+.card > * {
+    flex: 1 1 100%;
+}
+
+
+
+
+
+
+

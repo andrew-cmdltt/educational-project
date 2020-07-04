@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "generator-react-ts-component-dir": "^1.0.0",
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
